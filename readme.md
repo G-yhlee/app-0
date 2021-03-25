@@ -53,3 +53,9 @@ npm i --save webpack webpack-cli
 - app.js
 - index.js
 ```
+
+### 실행
+```
+npm run watch
+npm start
+```
