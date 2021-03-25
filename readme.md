@@ -40,9 +40,16 @@ npm i --save webpack webpack-cli
 
 ### setting
 ```
-0.setting
+0.0.0
 | home
+- .gitignore
 - index.html
 - main.js
-- .gitignore
+- package.json
+- preload.js
+- webpack.common.js
+
+| src
+- app.js
+- index.js
 ```
