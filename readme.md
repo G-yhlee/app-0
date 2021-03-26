@@ -64,3 +64,10 @@ npm i --save react-router-dom
 npm run watch
 npm start
 ```
+
+
+
+### firebase
+```
+구글 > firebase > firestore > start-collection
+```
