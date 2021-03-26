@@ -16,7 +16,13 @@ export default function Navbar(){
             </button>
             <Link 
             to="/settings" 
-            className="btn btn-outline-success ml-2">Settings</Link>
+            className="btn btn-outline-primary ml-2">Settings</Link>
+
+            <Link 
+            to="/VisitorChecker" 
+            className="btn btn-outline-primary ml-2">VisitorChecker</Link>
+
+
           </div>
           <div className="chat-navbar-inner-right">
             <span className="logged-in-user">Hi User</span>

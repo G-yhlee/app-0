@@ -1,5 +1,11 @@
 import React from 'react';
-import HomeView from './views/Home' 
+import HomeView from './views/Home'
+import LoginView from './views/Login'
+import SettingsView from './views/Settings'
+import RegisterView from './views/Register'
+
+
+
 import {
     HashRouter as Router,
     Switch,
@@ -19,18 +25,22 @@ export default function app(){
         <div className='content-wrapper'>
 
          <Switch>
-         <Route path="/settings">
-               <h1> set </h1>
-            </Route>
-            <Route path="/login">
-               <h1> login </h1>
-            </Route>
-            <Route path="/register">
-               <h1> register </h1>
-            </Route>
-             <Route path="/">
+            <Route path="/" exact>
                 <HomeView />
             </Route>
+            <Route path="/settings">
+            <SettingsView />
+            </Route>
+            <Route path="/visitorchecker">
+            <SettingsView />
+            </Route>
+            <Route path="/login">
+            <LoginView />
+            </Route>
+            <Route path="/register">
+            <RegisterView />
+            </Route>
+
          </Switch>
     </div>
 
