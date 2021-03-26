@@ -14,7 +14,7 @@ export default function Home(){
          
         </div>
         <div className="col-9 fh">
-            <ViewTitle />
+            <ViewTitle text="choose your channel" />
             <AvailableChats />
         </div>
       </div>

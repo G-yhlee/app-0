@@ -41,7 +41,7 @@ export default function app(){
             <Route path="/register">
             <RegisterView />
             </Route>
-            <Route path="/chat">
+            <Route path="/chat/:id">
             <ChatView />
             </Route>
          </Switch>
