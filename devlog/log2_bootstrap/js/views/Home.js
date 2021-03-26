@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 import JoinedChats from '../components/JoinedChats';
 import ChatSearch from '../components/ChatSearch';
 import AvailableChats from '../components/AvailableChats';
@@ -8,6 +9,10 @@ export default function Home(){
 
  // ########## HOME VIEW START ############
  return (
+    <div className='content-wrapper'>
+      {/* ########## NAVBAR START ############ */}
+        <Navbar />
+      {/* ########## NAVBAR END ############ */}
       <div className="row no-gutters fh">
         <div className="col-3 fh">
         <JoinedChats />
@@ -18,6 +23,7 @@ export default function Home(){
             <AvailableChats />
         </div>
       </div>
+    </div>
   )
   // ########## HOME VIEW END ############
 
