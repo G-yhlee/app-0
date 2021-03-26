@@ -9,6 +9,9 @@ electron & react 앱 입니다.
 ```erlang
 npm init -y
 npm i --save--dev electron electron-reload
+npm i --save--dev electron@10.0.0 electron-reload
+npm i --save--dev electron@8.5.5 electron-reload
+
 npm i --save @babel/core @babel/preset-env @babel/preset-react
 npm i --save babel-loader css-loader sass-loader style-loader sass 
 npm i --save react react-dom

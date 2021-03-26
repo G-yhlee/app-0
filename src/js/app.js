@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeView from './views/Home'
+import ChatView from './views/Chat'
 import LoginView from './views/Login'
 import SettingsView from './views/Settings'
 import RegisterView from './views/Register'
@@ -40,7 +41,9 @@ export default function app(){
             <Route path="/register">
             <RegisterView />
             </Route>
-
+            <Route path="/chat">
+            <ChatView />
+            </Route>
          </Switch>
     </div>
 
