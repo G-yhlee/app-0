@@ -19,6 +19,12 @@ npm i --save webpack webpack-cli
 npm i --save bootstrap@4.5.2
 npm i --save react-router-dom
 npm i --save firebase
+
+
+npm i --save rxjs
+
+
+
 ```
 
 

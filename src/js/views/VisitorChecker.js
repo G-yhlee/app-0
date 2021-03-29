@@ -9,7 +9,6 @@ function H_pictures (){
 
 }
 
-
 export default function _(){
     return (
       <>
@@ -17,8 +16,6 @@ export default function _(){
         <Download/>
         <Log/>
         <Post/>
-        {/* <Pictures/> */}
-
       </>
       )
 }
