@@ -19,6 +19,7 @@ export default function Navbar(){
             className="btn btn-outline-primary ml-2">Settings</Link>
 
             <Link 
+            id="VisitorChecker"
             to="/VisitorChecker" 
             className="btn btn-outline-primary ml-2">VisitorChecker</Link>
 

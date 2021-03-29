@@ -18,6 +18,7 @@ npm i --save react react-dom
 npm i --save webpack webpack-cli
 npm i --save bootstrap@4.5.2
 npm i --save react-router-dom
+npm i --save firebase
 ```
 
 
@@ -70,4 +71,12 @@ npm start
 ### firebase
 ```
 구글 > firebase > firestore > start-collection
+
+2) register > 
+```
+
+
+## capture
+```
+https://github.com/juliangruber/capture-electron
 ```

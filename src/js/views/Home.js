@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import JoinedChats from '../components/JoinedChats';
 import ChatSearch from '../components/ChatSearch';
 import AvailableChats from '../components/AvailableChats';
 import ViewTitle from '../components/shared/ViewTitle';
 
-export default function Home(){
+import {fetchChats} from '../api/chats'
 
- // ########## HOME VIEW START ############
+
+export default function Home(){
+  useEffect(()=> {
+    fetchChats();
+  },[])
+
  return (
       <div className="row no-gutters fh">
         <div className="col-3 fh">
@@ -19,6 +24,5 @@ export default function Home(){
         </div>
       </div>
   )
-  // ########## HOME VIEW END ############
 
 }

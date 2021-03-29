@@ -4,6 +4,7 @@ import ChatView from './views/Chat'
 import LoginView from './views/Login'
 import SettingsView from './views/Settings'
 import RegisterView from './views/Register'
+import VisitorChecker from './views/VisitorChecker'
 
 
 
@@ -33,7 +34,7 @@ export default function app(){
             <SettingsView />
             </Route>
             <Route path="/visitorchecker">
-            <SettingsView />
+            <VisitorChecker />
             </Route>
             <Route path="/login">
             <LoginView />
