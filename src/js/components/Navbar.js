@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link , useHistory} from 'react-router-dom';
 
-export default function Navbar(){
+export default function _(){
   const history = useHistory();
     return(
         <div className="chat-navbar">
@@ -22,6 +22,11 @@ export default function Navbar(){
             id="VisitorChecker"
             to="/VisitorChecker" 
             className="btn btn-outline-primary ml-2">VisitorChecker</Link>
+            <Link 
+            id="Tester"
+            to="/Tester" 
+            className="btn btn-outline-primary ml-2">Tester</Link>
+
 
 
           </div>
