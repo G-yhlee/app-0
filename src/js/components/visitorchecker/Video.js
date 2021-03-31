@@ -8,23 +8,6 @@ import { take , tap,filter as rxFilter, map, mergeMap,concatMap, concatAll, merg
 
 
 
-// var xhr = new XMLHttpRequest();
-// var url = "url";
-// xhr.open("POST", url, true);
-// xhr.setRequestHeader("Content-Type", "application/json");
-// xhr.onreadystatechange = function () {
-//     if (xhr.readyState === 4 && xhr.status === 200) {
-//         var json = JSON.parse(xhr.responseText);
-//         console.log(json.email + ", " + json.password);
-//     }
-// };
-// var data = JSON.stringify({"email": "hey@mail.com", "password": "101010"});
-// xhr.send(data);
-
-
-
-// console.log(xhr)
-
 
 
 
@@ -36,7 +19,12 @@ const stream_x = Rx.interval(75).pipe( take(20),tap((d)=>log(d+'d')))
 const pipe_capture = data => new Promise((resolve,reject)=>{
   setTimeout(()=>{
     capture()
-    resolve(log(data))
+    log(D_canvas.toDataURL("image/jpeg").split(',')[1]) // 일단 필요한 정보만 추출 하는거 성공
+    // fetch api 써서 보내보자
+    resolve(log(data)) // 이거 굳이 안써도 되는거 같은데
+
+
+
   },75)
 }) 
 

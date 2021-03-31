@@ -10,8 +10,10 @@ const H_Download = () => {
 
 export default function _(){
     return(
-        <>
-              <button  className="btn btn-outline-primary ml-2"> <a id="D_Download" download="myImage.jpg" href="" onClick={H_Download}>Download</a> </button>
-      </>
+    <>
+      <button  className="btn btn-outline-primary ml-2"> 
+        <a id="D_Download" download="myImage.jpg" href="" onClick={H_Download}>Download</a> 
+      </button>
+    </>
     )
 }
