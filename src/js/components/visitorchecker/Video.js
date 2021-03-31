@@ -3,50 +3,48 @@ const {log,error} = console
 import React from 'react';
 
 import * as Rx from 'rxjs'
-import { take , tap,filter as rxFilter, map}  from 'rxjs/operators';
-
-
-
-const source1 = ['d1','d2','d3']
-const source2 = ['d4','d5','d6']
-const source3 = new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-      resolve('delivery')
-    },3000)
-  })
-
-
-const stream3 = Rx.of(...source1)
-
-
-const stream1 = Rx.from(source1)
-const stream2 = Rx.from(source2)
-const stream_1and2 = Rx.concat(stream1,stream2)
-
-const stream4 = Rx.interval(1000).pipe(
-  tap((d)=>log(`x2: ${d*2}`) )  ,
-  rxFilter(data => data == 2),
-  take(10) ,  
-  map(d => d*3)
-).pipe(
-  tap((d)=>log(`x3: ${d*3}`) )  
-)
-const stream5 = Rx.timer(3000,1000).pipe(take(10))
-const stream_4and5 = Rx.concat(stream4,stream5)
-
-const filter = {
-  // next: (data) => {log(data)},
-  next: log,
-  complete: () => {log('done')},
-  error: (err) => {}
-}
+import { take , tap,filter as rxFilter, map, mergeMap,concatMap, concatAll, mergeAll}  from 'rxjs/operators';
 
 
 
 
+// var xhr = new XMLHttpRequest();
+// var url = "url";
+// xhr.open("POST", url, true);
+// xhr.setRequestHeader("Content-Type", "application/json");
+// xhr.onreadystatechange = function () {
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//         var json = JSON.parse(xhr.responseText);
+//         console.log(json.email + ", " + json.password);
+//     }
+// };
+// var data = JSON.stringify({"email": "hey@mail.com", "password": "101010"});
+// xhr.send(data);
 
 
-stream4.subscribe(filter)
+
+// console.log(xhr)
+
+
+
+
+const capture = () => D_canvas.getContext('2d').drawImage(D_video,0,0,640,480);
+// stream
+const stream_x = Rx.interval(75).pipe( take(20),tap((d)=>log(d+'d')))
+
+// pipe 설계
+const pipe_capture = data => new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+    capture()
+    resolve(log(data))
+  },75)
+}) 
+
+// stream-pipe
+const F_stream =  () => stream_x.pipe(
+  concatMap( data => Rx.from(pipe_capture(data)) )
+).subscribe()
+
 
 
 const constraints = {audio: false,video: { width: 500 , height: 300}}
@@ -86,7 +84,7 @@ const H_switch = () =>
   ({msg: D_switch.innerHTML, stream: _local_stream}
 )
 const H_Test = () => o()
-const H_capture = () => D_canvas.getContext('2d').drawImage(D_video,0,0,640,480);
+
 
 
 
@@ -100,7 +98,7 @@ export default function _(){
         </center>
         <br></br>
         <button id="D_switch" className="btn btn-outline-primary ml-2" onClick={H_switch} >on</button>
-        <button id="D_capture" className="btn btn-outline-primary ml-2" onClick={H_capture} > capture </button>
+        <button id="D_capture" className="btn btn-outline-primary ml-2" onClick={F_stream} > capture </button>
         <div id="D_Test" className="btn btn-outline-primary ml-2" onClick={H_Test} > Test </div>
       </>
     )
