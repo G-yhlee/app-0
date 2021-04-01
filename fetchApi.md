@@ -37,7 +37,11 @@ fetch(url, {
 
 ```js
 
+const url = "https://target url"
+const body = { name: 'zerocho' };
 const formData = new FormData();
+
+
 formData.append('name', 'zero')
 fetch('https://www.zerocho.com/api/post/formdata', {
   method: 'POST', // POST 메소드 지정
